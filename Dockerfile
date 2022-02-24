@@ -1,5 +1,8 @@
 FROM almalinux:8
 
+LABEL org.opencontainers.image.authors="CAENTainer Maintainers <caentainer-ops@umich.edu>"
+LABEL org.opencontainers.image.source="https://github.com/CAENTainer/Base"
+
 RUN dnf update -y \
   	&& dnf install -y git \
    	vim \
@@ -15,4 +18,4 @@ RUN mkdir -p /root/.caentainer_persisted/ \
 
 COPY assets/.p10k.zsh assets/.zshrc /root/
 
-ENTRYPOINT ["/usr/bin/zsh"]
+CMD ["/usr/bin/zsh"]

@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gitsync='git fetch origin $(git branch --show-current) && git reset --hard FETCH_HEAD && git clean -df; git stash --all && git stash drop'
+alias git-force-sync='git fetch origin $(git branch --show-current) && git reset --hard FETCH_HEAD && git clean -df; git stash --all && git stash drop'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
